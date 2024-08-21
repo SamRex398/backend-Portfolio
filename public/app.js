@@ -1,24 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
 const path = require('path');
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-// Set up EJS views
-app.use(express.static(path.join(__dirname, 'views')));
-
-
 // Routes
-app.get('/index.html', (req, res) =>   res.sendFile(path.join(__dirname, 'index.html')));
-app.get('/views/project.html', (req, res) => res.sendFile(path.join(__dirname,'views','project.html')));
-app.get('/views/about.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'about.html'));
-});
-app.get('/views/contact.html', (req, res) => res.sendFile(path.join(__dirname, 'views' ,'contact.html')));
+
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
+app.get('/projects', (req, res) => res.sendFile(path.join(__dirname, 'public', 'projects.html')));
+app.get('/about', (req, res) => res.sendFile(path.join(__dirname, 'public', 'about.html')));
+app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'public', 'contact.html')));
 
 // Handle form submission
 app.post('/send-message', (req, res) => {
