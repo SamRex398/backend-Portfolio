@@ -107,7 +107,7 @@ section {
 
 .project {
   background: #2a2a3b;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, background 0.3s;
@@ -116,6 +116,13 @@ section {
 .project:hover {
   transform: translateY(-10px);
   background: #1e1e2f;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .project h3 {
@@ -140,6 +147,13 @@ section {
 .project a:hover {
   color: #00d4ff;
 }
+
+@media (max-width: 768px) {
+  #projects {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Skills Section */
 .skills-section {
