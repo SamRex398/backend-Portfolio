@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from the 'public' folder
 
 // Routes
 
