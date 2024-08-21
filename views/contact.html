@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Contact | Your Name</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>If you have any questions or would like to discuss an opportunity, feel free to reach out using the form below.</p>
+
+      <!-- Success message will be shown here -->
+      <div id="success-message" style="color: #64ffda; display: none;">
+        Your message has been sent successfully!
+      </div>
+
+      <form action="/send-message" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </section>
+
+    <script>
+      // Check for success query parameter in URL
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        document.getElementById('success-message').style.display = 'block';
+      }
+    </script>
+  </main>
+</body>
+</html>
