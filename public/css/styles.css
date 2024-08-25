@@ -312,6 +312,92 @@ section {
 #contact form input[type="submit"]:hover {
   background: #52e2c1;
 }
+/* Timeline Section */
+#timeline {
+  padding: 60px 20px;
+    background: #1e1e2f;
+      color: #ffffff;
+        text-align: center;
+        }
+
+        #timeline h2 {
+          font-size: 2.5rem;
+            margin-bottom: 40px;
+              color: #00d4ff;
+              }
+
+              .timeline {
+                position: relative;
+                  padding-left: 20px;
+                    border-left: 3px solid #00d4ff;
+                    }
+
+                    .timeline-item {
+                      margin: 40px 0;
+                        position: relative;
+                        }
+
+                        .timeline-item:before {
+                          content: "";
+                            position: absolute;
+                              left: -12px;
+                                top: 0;
+                                  width: 20px;
+                                    height: 20px;
+                                      background: #00d4ff;
+                                        border-radius: 50%;
+                                          border: 4px solid #1e1e2f;
+                                          }
+
+                                          .timeline-date {
+                                            font-weight: bold;
+                                              font-size: 1.2rem;
+                                                color: #00d4ff;
+                                                  margin-bottom: 10px;
+                                                  }
+
+                                                  .timeline-content {
+                                                    background: #2a2a3b;
+                                                      padding: 20px;
+                                                        border-radius: 10px;
+                                                          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+                                                            transition: transform 0.3s, background 0.3s;
+                                                            }
+
+                                                            .timeline-content:hover {
+                                                              transform: translateY(-5px);
+                                                                background: #33334d;
+                                                                }
+
+                                                                .timeline-content h3 {
+                                                                  font-size: 1.8rem;
+                                                                    margin-bottom: 10px;
+                                                                      color: #ccd6f6;
+                                                                      }
+
+                                                                      .timeline-content p {
+                                                                        font-size: 1.2rem;
+                                                                          color: #8892b0;
+                                                                          }
+
+                                                                          /* Footer Section */
+                                                                          footer {
+                                                                            padding: 20px;
+                                                                              background: #0a192f;
+                                                                                text-align: center;
+                                                                                  color: #ccd6f6;
+                                                                                  }
+
+                                                                                  footer p {
+                                                                                    margin: 5px 0;
+                                                                                      font-size: 1rem;
+                                                                                        color: #8892b0;
+                                                                                        }
+
+                                                                                        footer p:first-child {
+                                                                                          font-size: 1.1rem;
+                                                                                            color: #00d4ff;
+                                                                                            }
 
 @media (max-width: 768px) {
   nav ul {
